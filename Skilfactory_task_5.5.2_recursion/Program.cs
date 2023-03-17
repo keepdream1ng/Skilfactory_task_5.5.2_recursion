@@ -7,18 +7,18 @@
             Console.WriteLine("Enter phrase for echo/ Введите фразу для эха");
             string phrase = Console.ReadLine();
 
-            Console.WriteLine("Enter echo deepness/ Введите глубину эха");
-            byte deepness = Byte.Parse(Console.ReadLine());
+            //Console.WriteLine("Enter echo deepness/ Введите глубину эха");
+            //byte deepness = Byte.Parse(Console.ReadLine());
 
-            Echo(phrase, deepness);
+            Echo(phrase);
         }
 
-        static void Echo(string phrase, byte deepness)
+        static void Echo(string phrase)
         {
-            if (deepness > 0) {
+            if (phrase.Length > 3) {
                 phrase = phrase.Remove(0, 2);
                 Console.WriteLine($"...{phrase}");
-                Echo(phrase, --deepness);
+                Echo(phrase);
             }
 
         }
