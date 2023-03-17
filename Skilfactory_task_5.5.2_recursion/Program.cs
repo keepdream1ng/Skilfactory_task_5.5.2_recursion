@@ -17,6 +17,7 @@
         {
             if (deepness > 0) {
                 phrase = phrase.Remove(0, 2);
+                Console.BackgroundColor = (ConsoleColor) deepness;
                 Console.WriteLine($"...{phrase}");
                 Echo(phrase, --deepness);
             }
